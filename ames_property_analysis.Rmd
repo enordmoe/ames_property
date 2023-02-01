@@ -25,7 +25,7 @@ We start by loading the **tidyverse** that contains all the packages we will nee
 library(tidyverse)
 ```
 
-We will use the  [AmesHousing](http://www.amstat.org/publications/jse/v19n3/decock.pdf) data, which provides information on the sales of individual residential properties in Ames, Iowa from 2006 to 2010. The data set contains 2930 observations, and a large number of explanatory variables involved in assessing home values. A full description of this dataset can be found [here](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt). The command chunk below loads the library with the data and does some pre-processing to make the data easier to work with. In particular, our use of the `make_ordinal_ames()` command produces a data set where categorical variables are stored as ordered factors making them easy to work with. (Note: This function includes code specific to the Ames data package and is not a general R feature.) Review the results of the `glimpse()` command to get a feel for the variable names.
+We will use the  [AmesHousing](https://www.tandfonline.com/doi/abs/10.1080/10691898.2011.11889627) data, which provides information on the sales of individual residential properties in Ames, Iowa from 2006 to 2010. The data set contains 2930 observations, and a large number of explanatory variables involved in assessing home values. A full description of this dataset can be found [here](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt). The command chunk below loads the library with the data and does some very useful pre-processing of the data. In particular, our use of the `make_ordinal_ames()` command produces a data set where categorical variables are stored as ordered factors making them easy to work with. (Note: This function includes code specific to the Ames data package and is not a general R feature.) Review the results of the `glimpse()` command to get a feel for the variable names and consult the detailed description linked above as needed.
 
 ```{r}
 # Create the data
@@ -34,12 +34,12 @@ ames <- make_ordinal_ames() # creates the data set caled ames
 glimpse(ames)
 ```
 
-
+Before proceeding, be sure you understand that each case represents a residential property that was sold during the period 2006--2010.
 
 # Digging Into the Data
 
 
-1. Use **ggplot2** to create a histogram of housing sale prices.  
+1. Use **ggplot2** to create a histogram of Ames housing sale prices.  
 
 **Answer:**  
 
@@ -58,7 +58,7 @@ glimpse(ames)
 
 
 
-3. You should have noticed 5 observations that are unusual for having considerably larger living area than most residential properties. Use an appropriate command to remove these observations and save under the name **ames2**.
+3. You should have noticed 5 observations that are unusual for having considerably larger living area than most residential properties. Use an appropriate command to remove these very large propoerties and save the remaining data under the name **ames2**.
 
 **Answer:**  
 
@@ -68,7 +68,7 @@ glimpse(ames)
 
 
     
-4. Create a scatterplot with log transformed variables (natural log, `log()`) and map kitchen quality to the color aesthetic.  
+4. Use the **ames2** data set here and for the rest of the lab. Create a scatterplot with log transformed variables (natural log, `log()`) and map kitchen quality to the color aesthetic. 
 
 **Answer:**  
 
@@ -87,7 +87,7 @@ glimpse(ames)
 ```
 
 
-6. Create a boxplot showing the relationship between log of sale price and kichen quality.
+6. Create a boxplot showing the relationship between log of sale price and kitchen quality.
 
 **Answer:**  
 
@@ -119,7 +119,7 @@ glimpse(ames)
 **Answer:**
 
 
-10. Do these graphs indicate that the quality of a kitchen could be related to the sale price?  Explain briefly.  
+10. Do these graphs indicate that the quality of a kitchen could be related to the sale price?  Explain in at least a couple sentences.  
 **Answer:**
 
 
@@ -160,7 +160,7 @@ glimpse(ames)
 
 # The Grand Finale
 
-15. **Data Transformation and Graphing** Use what you have learned about data transformations and graphics to carry out the following:  
+15. **Data Transformation and Graphing** Use what you have learned about data transformations and graphics to carry out the following (still starting with the **ames2** data set:  
 
 * Restrict the Ames housing data to only sales under normal conditions. In other words, `Condition_1 == "Norm"`.
 
