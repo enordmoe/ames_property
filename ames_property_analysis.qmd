@@ -24,7 +24,6 @@ library(tidyverse)
 
 ```
 
-
 In this exercise, you will use the concepts you have learned about thus far to carry out an analysis of a real data set. We will review ideas of data visualization and exploratory data analysis after which you will be asked to carry out several procedures on your own.
 
 # Data and packages
@@ -141,7 +140,7 @@ library(ggridges)
 
 ```
 
-14. Modify the scatterplot in the previous question so that there is still only one  line, but the points are colored by the overall condition of the home, `Overall_Cond`.
+14. Modify the scatterplot in the previous question so that there is still only one line, but the points are colored by the overall condition of the home, `Overall_Cond`.
 
 **Answer:**
 
