@@ -2,7 +2,7 @@
 title: "Analysis of Ames Property Data:"
 subtitle: "An Exploratory Data Analysis"
 author: all participating group member names here
-date: "February 20, 2024"
+date: "February 19, 2025"
 format: 
     html:
       theme: united
