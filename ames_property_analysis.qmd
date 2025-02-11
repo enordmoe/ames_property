@@ -13,7 +13,6 @@ format:
 execute: 
   cache: true
   warning: false
-editor: visual
 ---
 
 ```{r}
