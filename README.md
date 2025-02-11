@@ -1,5 +1,5 @@
 # Lab #3: Ames Property Analysis
-## Due end of day Wednesday, February 20, 2024
+## Due end of day Wednesday, February 19, 2025
 
 Exploratory data analysis lab dealing with data on property in Ames, Iowa. The project template `ames_property_analysis.qmd` provides code to access the data and other details.
 
